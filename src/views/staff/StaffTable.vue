@@ -1,6 +1,7 @@
 <template>
   <div class="staff-table">
     <el-table v-fixed border style="width: 100%"
+      :height="height"
       @selection-change="handleSelectionChange"
       :data="tableData">
       <el-table-column type="selection" width="55"> </el-table-column>
@@ -43,6 +44,7 @@ export default {
   },
   data() {
     return {
+      height: null,
       query: {
         pageSize: 10,
         totalPage: 10,
@@ -63,6 +65,30 @@ export default {
         address: '上海市普陀区金沙江路 1518 弄'
       }, {
         date: '2016-05-01',
+        name: '王小虎',
+        address: '上海市普陀区金沙江路 1518 弄'
+      }, {
+        date: '2016-05-08',
+        name: '王小虎',
+        address: '上海市普陀区金沙江路 1518 弄'
+      }, {
+        date: '2016-05-06',
+        name: '王小虎',
+        address: '上海市普陀区金沙江路 1518 弄'
+      }, {
+        date: '2016-05-08',
+        name: '王小虎',
+        address: '上海市普陀区金沙江路 1518 弄'
+      }, {
+        date: '2016-05-06',
+        name: '王小虎',
+        address: '上海市普陀区金沙江路 1518 弄'
+      }, {
+        date: '2016-05-08',
+        name: '王小虎',
+        address: '上海市普陀区金沙江路 1518 弄'
+      }, {
+        date: '2016-05-06',
         name: '王小虎',
         address: '上海市普陀区金沙江路 1518 弄'
       }, {
@@ -95,13 +121,17 @@ export default {
         const vm = vnode.context
         const wh = window.innerHeight
         const top = el.getBoundingClientRect().top
-        el.style.height = wh - top - 48 - 15 + 'px'
+        const h = wh - top - 48 - 15
+        el.style.height = h + 'px'
+        vm.height = h
         console.log(wh, top)
         // todo top偶尔异常
         window.onresize = function () {
           const wh = window.innerHeight
           const top = el.getBoundingClientRect().top
-          el.style.height = wh - top - 48 - 15 + 'px'
+          const h = wh - top - 48 - 15
+          el.style.height = h + 'px'
+          vm.height = h
           // console.log(wh, top)
         }
       }
