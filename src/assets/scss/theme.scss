@@ -1,0 +1,11 @@
+/* 改变主题色变量 */
+// $--color-primary: rgba(83, 202, 195, 1);
+// $--color-danger: rgba(245,108,108,1) !default;
+
+/* 改变 icon 字体路径变量，必需 */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+.el-scrollbar__wrap{
+  margin-bottom: 0!important;
+  overflow-x: hidden!important;
+}

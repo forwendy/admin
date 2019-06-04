@@ -1,0 +1,142 @@
+
+/* 处理滚动条显示隐藏页面跳动 */
+html {
+  overflow-y: scroll;
+}
+
+:root {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+:root body {
+  position: absolute;
+}
+
+body {
+  width: 100vw;
+  overflow: hidden;
+}
+/* 处理滚动条显示隐藏页面跳动 */
+
+* {
+  -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+body{
+	margin: 0;
+  font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', SimSun, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 字体 & 浏览器样式 */
+input,
+textarea {
+  font-family: inherit;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* 自动填充 */
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+/* input:focus,
+textarea:focus{
+  border: none;
+  outline: none;
+} */
+
+/* :-moz-placeholder {
+    color: #bbb;
+}
+::-moz-placeholder {
+    color: #bbb;
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    color: #bbb;
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #bbb;
+} */
+
+.border-box{
+  box-sizing: border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+}
+
+.fix:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.fix {
+  *zoom: 1;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.img-contain {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.inaline {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+}
+
+.inline-x {
+  display: -webkit-box !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  /*-webkit-line-clamp:*/
+}
+
+.no-select{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* 禁止换行 */
+.nowrap{
+  white-space:nowrap;
+}
+
+p{margin: 0;}
